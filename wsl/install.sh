@@ -19,7 +19,7 @@ wsl -l -o &&
 # take user input for distribution
 
 echo "Installing WSL, [user-input] distribution. Continue?"
-#wsl --install -d [user-input] &&
+wsl --install -d [user-input] &&
 
 # If Ubuntu app hangs on "Installing, this may take a few minutes"
 # Try opening WSL on VS Code
