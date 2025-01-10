@@ -19,13 +19,13 @@ sudo systemctl status mysql &&
 
 echo "Checking network status of server"
 
-sudo ss -tap | grep mysql 
+sudo ss -tap | grep mysql &&
 
 echo "Logging in to MySQL via root for initial setup"
 
-sudo mysql
+sudo mysql &&
 
-echo "=== MySQL Interface Queries ==="
+echo "=== MySQL Interface ==="
 echo "Checking existing users"
 
 SELECT user,host FROM mysql.user;
@@ -61,6 +61,16 @@ SHOW GRANTS FOR '<username>'@'<host>';
 echo "Everything look correct?"
 # take user input for yes or no
 
-echo "Exiting. Please login again to make any changes you see fit."
+echo "Exiting MySQL interface. Please login again to make any changes you see fit."
 
 exit;
+
+echo "=== End MySQL Interface ==="
+
+echo "Restarting MySQL service to set changes and allow new user login. Continue?"
+# take user input for yes or no
+
+sudo systemctl restart mysql
+
+echo "Additional resources:"
+echo " - https://ubuntu.com/server/docs/install-and-configure-a-mysql-server"
