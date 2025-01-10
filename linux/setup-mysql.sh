@@ -61,5 +61,6 @@ SHOW GRANTS FOR '<username>'@'<host>';
 echo "Everything look correct?"
 # take user input for yes or no
 
-# if no
-echo "Please make any changes you see fit."
+echo "Exiting. Please login again to make any changes you see fit."
+
+exit;
