@@ -18,6 +18,9 @@ echo "Installing JDK. Which version do you want to install?"
 
 sudo apt install openjdk-<ver>-jre-headless &&
 
+# if downloading specific version doesn't work
+sudo apt install default-jre &&
+
 echo "Confirming JDK version installed"
 
 java --version
