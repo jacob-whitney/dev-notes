@@ -27,3 +27,10 @@ java --version
 
 echo "Additional resources:"
 echo " - https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-22-04"
+
+echo "Checking if JDK is also installed"
+
+javac -version
+
+# if not installed
+sudo apt install default-jdk
