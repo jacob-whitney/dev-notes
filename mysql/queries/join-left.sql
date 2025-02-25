@@ -14,3 +14,13 @@ LEFT JOIN
   wp_term_relationships ON wp_posts.ID = wp_term_relationships.object_id
 WHERE 
   wp_posts.ID=4140 OR wp_posts.ID=160595;
+
+/* Example */
+SELECT 
+  table1.column1, table2.column1
+FROM 
+  table1
+LEFT JOIN 
+  table2 
+ON 
+  table1.column = table2.column;
