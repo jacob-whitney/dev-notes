@@ -10,5 +10,4 @@ SELECT
 FROM 
   Movies
 WHERE 
-  RentalPrice > 
-    (SELECT AVG(RentalPrice) FROM Movies);
+  RentalPrice > (SELECT AVG(RentalPrice) FROM Movies);
