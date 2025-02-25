@@ -10,10 +10,8 @@ WHERE
   <condition>
 INTERSECT
 SELECT 
-  <column1> , <column2> ....
+  <column1> , <column2>
 FROM 
   <table_names>
 WHERE 
-  <condition>
-
- 
+  <condition>;
