@@ -8,7 +8,7 @@ echo "Preparing to install Windows Subsystem for Linux (WSL)"
 echo "Setting default WSL version to 2. Continue?"
 # take user input for yes or no
 
-#wsl --set-default-version 2
+wsl --set-default-version 2
 
 echo "Is Ubuntu distribution's latest version ok?"
 # take user input for yes or no
