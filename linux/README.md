@@ -1,25 +1,43 @@
 # Linux
 
+## Resources
+
+[Linux Filesystem Explained](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-explained) from The Linux Foundation
+- Provides examples for using ``tree`` command
+
 ## Packages
+
+- **tree** | View directories, subdirectories, and files in a file tree
+  - Install via ``sudo apt install tree``
+  - Check current version with ``tree --version``
+- **apropos** | Find commands in man pages by searching a keyword (pre-installed with Ubuntu)
+- **tldr** | Community contributed man pages with more practical examples
+- **etckeeper** | Track changes to /etc made from apt or other resources
+- **mysql-server** | For hosting MySQL databases
+- **openssh-server** | For making machine remotely accessible via ssh
+    - **openssh-sftp-server** | For SFTP service
+    - **ssh-import-id** | For import services
+
+## Get Help
+
+Looking for a specific command?
+1. Search for a keyword using ``apropos <keyword>``
+2. Get common examples of a command using ``tldr <command>``
+3. Look for resources in dev-notes or dev-files repos
+4. Search for info online and save any resources in dev-notes
+4. Use ``man <command>`` | Open manual for any command
+   - Ex: ``man cd`` | view manual for the ``cd`` comman
+   - Ex: ``man --path`` | Shows paths where ``man`` is looking for manual pages
+   - ``-w`` | Shows where man page is being pulled from
+   - Ex: ``man -w ls`` | Show location of manual page for ``ls`` command
+   - Resource: [Create custom man pages](https://github.com/pjungwir/manpj/) from manpj (GitHub repo)
+   - Default manuals found in ``/usr/share/man`` on Ubuntu
+
+## Explore
 
 Look into etckeeper for tracking what apt changes
 - Frank also asked about lynis and auditd
 - Frank also commented, I've been locking down ssh and enabling ufw.  It's crazy how many bots tend to try to gain access.
-
-- mysql-server | For hosting MySQL databases
-- openssh-server | For making machine remotely accessible via ssh
-    - openssh-sftp-server | For SFTP service
-    - ssh-import-id | For import services
-
-## Get Help
-
-``man <command>`` | Open manual for any command
-- Ex: ``man cd`` | view manual for the ``cd`` comman
-- Ex: ``man --path`` | Shows paths where ``man`` is looking for manual pages
-- ``-w`` | Shows where man page is being pulled from
-- Ex: ``man -w ls`` | Show location of manual page for ``ls`` command
-- Resource: [Create custom man pages](https://github.com/pjungwir/manpj/) from manpj (GitHub repo)
-- Default manuals found in ``/usr/share/man`` on Ubuntu
 
 
 ## Config
